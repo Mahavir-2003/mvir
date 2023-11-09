@@ -1,6 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+@font-face {
+  font-family: "coign";
+  src: url("./assets/fonts/Coign.ttf");
+}
+
+
+@font-face {
+  font-family: 'supreme-variable';
+  src: url("./assets/fonts/Supreme-Variable.ttf");
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -17,11 +29,94 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: url("../public/noise/noise.png") repeat ;
+  background-color: #111111;
+  overflow-x: hidden;
 }
+
+.intro-loader{
+  background: url("../public/noise/noise.png") repeat ;
+  background-color: #111111;
+}
+
+.dashed-circle-1 {
+  animation: rotate1 20s infinite alternate ease-in-out;
+}
+
+.dashed-circle-2 {
+  animation: rotate2 30s infinite alternate ease-in-out;
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(360deg) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(360deg) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.5;
+  }
+}
+
+.gradientText {
+  color: transparent;
+  /* background: linear-gradient(120deg, #fcb69f, #a1c4fd, #ffecd2, #8fdcff);
+   */
+   background-size: cover;
+   background-image: url("../app/assets/video/text_animation.gif");
+   /* https://media2.giphy.com/media/FyoaJE2iah7WYeyxWr/giphy.gif */
+   /* https://media.tenor.com/QZG9CftjeQQAAAAd/abstract-pattern.gif */
+   /* https://media2.giphy.com/media/FyoaJE2iah7WYeyxWr/giphy.gif */
+   /* https://cdn.dribbble.com/users/4025749/screenshots/7319596/media/e8e15b54c947cdc39e9abe93a9080e73.gif */
+   /* https://i.gifer.com/81sa.gif */
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.digi{
+  mix-blend-mode: difference;
+  /* multiply  */
+}
+
+.link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.link:hover {
+  align-items: start;
+  cursor: none;
+}
+
+.link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.4s ease-in-out;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
