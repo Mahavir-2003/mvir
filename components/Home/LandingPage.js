@@ -14,9 +14,9 @@ const LandingPage = () => {
     <div className='w-full select-none h-screen flex flex-col justify-center items-center'>
     <Navbar />
     <div className='h-[90vh] w-full rounded-full flex justify-center items-center relative overflow-hidden'>
-      <Image src={DashedCircle1} alt='dashed circle' className='absolute h-full dashed-circle-1' />
-      <Image src={DashedCircle2} alt='dashed circle' className='absolute h-full dashed-circle-2 w-[90%]' />
-        <p className="text-[550px]  font-coign text-transparent gradientText z-20 tracking-wide " id='header-text'>MAHAVIR PATEL</p>
+      {/* <Image src={DashedCircle1} alt='dashed circle' className='absolute h-full dashed-circle-1' />
+      <Image src={DashedCircle2} alt='dashed circle' className='absolute h-full dashed-circle-2 w-[90%]' /> */}
+        <p className="text-[550px]  font-coign text-transparent gradientText z-20 tracking-wide " id='header-text' data-text="MAHAVIR PATEL">MAHAVIR PATEL</p>
         {/* <div className='digi h-full w-full bg-yellow-400 absolute z-40'></div> */}
     </div>
   </div>

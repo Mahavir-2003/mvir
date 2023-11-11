@@ -30,6 +30,7 @@ useEffect(()=>{
 
     // target all elements to be used for DOM elements
     const headerText = document.getElementById("header-text");
+    const menuIcon = document.getElementById("menu-icon");
 
     // move cursor along with mouse cursor
     const onMouseMove = (event) => {
@@ -69,9 +70,36 @@ useEffect(()=>{
     })
 
 
-})
+    // handle animation for menu icon
+    menuIcon.addEventListener("mouseenter", () => {
+        gsap.set(cursorFollower, {
+            opacity : 0,
+            duration : 0.1
+        })
+        gsap.to(cursor, {
+            width : "100px",
+            height : "100px",
+            backgroundColor : "#ffffff",
+            duration : 0.4,
+            ease : "power2.inOut"
+        });
+    })
+    menuIcon.addEventListener("mouseleave", () => {
+        gsap.to(cursor, {
+            width : "20px",
+            height : "20px",
+            backgroundColor : "#ffffff",
+            duration : 0.4,
+            ease : "power2.inOut"
+        })
+        gsap.set(cursorFollower, {
+            opacity : 1,
+            duration : 0.5
+        })
+    })
 
-    
+
+},[])
 
 
 

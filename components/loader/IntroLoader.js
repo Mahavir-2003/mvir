@@ -31,10 +31,10 @@ const rollIntro = async () => {
       ease : "circ.inOut"
     })
     .to(".intro-loader", {
-      duration: 0.6,
-      height: 0,
+      duration: 0.8,
+      opacity: 0, 
       ease: "power3.inOut",
-    }, "-=0.3")
+    }, "-=0.2")
     .set(".intro-loader", {
       display: 'none',
     });

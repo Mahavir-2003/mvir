@@ -93,11 +93,17 @@
 }
 
 body {
-  background: url("../public/noise/noise.png") repeat ;
+  background: url("../app/assets/video/topo_2.gif") repeat ;
   background-color: #111111;
   overflow-x: hidden;
   cursor: none !important;
 }
+
+::-webkit-scrollbar{
+  width: 0px;
+  background: transparent;
+}
+
 
 .intro-loader{
   background: url("../public/noise/noise.png") repeat ;
@@ -143,7 +149,7 @@ body {
 }
 
 .gradientText {
-  color: transparent;
+  color: #ff00ff55;
   /* background: linear-gradient(120deg, #fcb69f, #a1c4fd, #ffecd2, #8fdcff);
    */
    background-size: cover;
@@ -155,7 +161,7 @@ body {
    /* https://i.gifer.com/81sa.gif */
   background-clip: text;
   -webkit-background-clip: text;
-}
+} 
 
 .digi{
   mix-blend-mode: difference;
@@ -170,7 +176,6 @@ body {
 
 .link:hover {
   align-items: start;
-  cursor: none;
 }
 
 .link::after {
